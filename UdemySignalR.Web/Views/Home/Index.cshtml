@@ -10,27 +10,39 @@
         //withAutomaticReconnect 0,2,10,30 saniye default
         var connection = new signalR.HubConnectionBuilder().configureLogging(signalR.LogLevel.Information).withAutomaticReconnect().withUrl("https://localhost:44397/MyHub").build();
 
-        $("#conStatus").text(connection.connectionState);
-
-        connection.start().then(() => {
+        //Functions
+        function statusShow(){
             $("#conStatus").text(connection.connectionState);
+        }
+        function Start(){
+            connection.start().then(() => {
+            statusShow();
             $("#loading").hide();
-        }).catch((err) => { console.log(err) });
+        }).catch((err) => {
+            console.log(err);
+            setTimeout(()=>Start(),2000);
+        });
+        }
 
-        $("#conStatus").text(connection.connectionState);
+        statusShow();
+
+        Start();
+
+        statusShow();
 
         connection.onreconnecting(err=>{
             $("#loading").show();
-            $("#conStatus").text("Bağlantı başarılı");
-            console.log("onreconnection:"+err);
+            $("#conStatus").text("Bağlanılıyor");
         });
         connection.onreconnected(connectionId=>{
             $("#loading").hide();
             $("#conStatus").text("Yeniden bağlantı başarılı");
+            console.log("conId:"+connectionId);
         });
         connection.onclose(()=>{
              $("#loading").hide();
-             $("#conStatus").text("Bağlantıyı yenileyiniz.");
+             $("#conStatus").text("Bağlantı başarısız sayfayı yenileyiniz.");
+             Start();
         })
 
         //Clicks
