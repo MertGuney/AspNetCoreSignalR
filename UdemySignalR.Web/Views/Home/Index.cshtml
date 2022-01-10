@@ -7,7 +7,8 @@
 
     $(document).ready(() => {
 
-        var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44397/MyHub").configureLogging(signalR.LogLevel.Information).build();
+        //withAutomaticReconnect 0,2,10,30 saniye default
+        var connection = new signalR.HubConnectionBuilder().configureLogging(signalR.LogLevel.Information).withAutomaticReconnect().withUrl("https://localhost:44397/MyHub").build();
 
         $("#connStatus").text(connection.connectionState);
 
@@ -36,7 +37,7 @@
         <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>
         <hr />
         <div class="alert alert-info">
-            Bağlantı Durumu: <strong id="connStatus"></strong>
+            Bağlantı Durumu: <strong id="connStatus" ></strong>
         </div>
         <div class="col-md-8 offset-2">
             <ul class="list-group" id="namesList"></ul>
