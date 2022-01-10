@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "07c23723-6e72-4951-a9a5-adceab8e1ce7": {
+      "ProjectGuid": "07c23723-6e72-4951-a9a5-adceab8e1ce7",
+      "DisplayName": "UdemySignalR.Api",
+      "ColorIndex": 0
+    },
+    "ba51ee86-e560-40dc-9a07-4851d09b1367": {
+      "ProjectGuid": "ba51ee86-e560-40dc-9a07-4851d09b1367",
+      "DisplayName": "UdemySignalR.Web",
+      "ColorIndex": 1
+    },
+    "e01d0445-1ba3-4757-8048-e9eb318605ba": {
+      "ProjectGuid": "e01d0445-1ba3-4757-8048-e9eb318605ba",
+      "DisplayName": "UdemySignalR.Web2",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
