@@ -9,11 +9,19 @@ namespace UdemySignalR.Api.Hubs
     {
         private static List<string> Names { get; set; } = new List<string>();
         private static int ClientCount { get; set; } = 0;
+        public static int TeamCount { get; set; } = 7;
         public async Task SendName(string name)
         {
-            Names.Add(name);
-            //Eğer clientlar ReceiveName olarak tanımladığımız method adını tanımlayıp subcribe olduysa message'ı alıcak.
-            await Clients.All.SendAsync("ReceiveName", name);//All prop->bu huba bağlı olan bütün clientlara bildiri gönderir.
+            if (Names.Count >= TeamCount)
+            {
+                await Clients.Caller.SendAsync("Error", $"Takım en fazla {TeamCount} kişi olabilir.");
+            }
+            else
+            {
+                Names.Add(name);
+                //Eğer clientlar ReceiveName olarak tanımladığımız method adını tanımlayıp subcribe olduysa message'ı alıcak.
+                await Clients.All.SendAsync("ReceiveName", name);//All prop->bu huba bağlı olan bütün clientlara bildiri gönderir.
+            }
         }
 
         public async Task GetNames()
