@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/UdemySignalR.Api/bin/Debug/netcoreapp3.1/runtimes
+/UdemySignalR.Api/bin/Debug/netcoreapp3.1/
+/UdemySignalR.Api/obj/
