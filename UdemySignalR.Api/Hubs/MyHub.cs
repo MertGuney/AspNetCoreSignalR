@@ -60,14 +60,14 @@ namespace UdemySignalR.Api.Hubs
             }
             await _context.SaveChangesAsync();
 
-            await Clients.Group(teamName).SendAsync("ReceiveMessageByGroup", name, teamName);
+            await Clients.Group(teamName).SendAsync("ReceiveMessageByGroup", name, team.Id);
         }
 
         public async Task GetNamesByGroup()
         {
             var teams = _context.Teams.Include(x => x.Users).Select(x => new
             {
-                teamName = x.Name,
+                teamId = x.Id,
                 users = x.Users.ToList()
             });
             await Clients.All.SendAsync("ReceiveNamesByGroup", teams);
