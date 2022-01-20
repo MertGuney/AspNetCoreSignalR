@@ -1,0 +1,4 @@
+<router-outlet></router-outlet>
+<h1 style="text-align: center;">Covid Chart</h1>
+<google-chart [title]="'Covid Chart'" [type]="c" [data]="covidService.covidChartList" [columns]="columnNames"
+  [options]="options" [width]="1000" [height]="700"></google-chart>

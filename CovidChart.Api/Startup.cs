@@ -38,7 +38,7 @@ namespace CovidChart.Api
             {
                 options.AddPolicy("CorsPolicy", builder =>
                 {
-                    builder.WithOrigins("https://localhost:44387", "https://localhost:44321").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                    builder.WithOrigins("https://localhost:44387", "https://localhost:44321", "http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
             });
 

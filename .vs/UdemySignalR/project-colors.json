@@ -15,7 +15,17 @@
       "ProjectGuid": "e01d0445-1ba3-4757-8048-e9eb318605ba",
       "DisplayName": "UdemySignalR.Web2",
       "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "effddf5f-0e34-40f2-9af7-b7a178aea9c7": {
+      "ProjectGuid": "effddf5f-0e34-40f2-9af7-b7a178aea9c7",
+      "DisplayName": "CovidChart.Api",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }
