@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemySignalR.Api", "UdemySi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemySignalR.Web", "UdemySignalR.Web\UdemySignalR.Web.csproj", "{BA51EE86-E560-40DC-9A07-4851D09B1367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidChart.Api", "CovidChart.Api\CovidChart.Api.csproj", "{EFFDDF5F-0E34-40F2-9AF7-B7A178AEA9C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA51EE86-E560-40DC-9A07-4851D09B1367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA51EE86-E560-40DC-9A07-4851D09B1367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA51EE86-E560-40DC-9A07-4851D09B1367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFFDDF5F-0E34-40F2-9AF7-B7A178AEA9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFDDF5F-0E34-40F2-9AF7-B7A178AEA9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFDDF5F-0E34-40F2-9AF7-B7A178AEA9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFDDF5F-0E34-40F2-9AF7-B7A178AEA9C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
